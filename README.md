@@ -70,7 +70,8 @@ RescueAI addresses this challenge by using AI to:
 
 - Home Page
   
-  <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/0f41a8f1-78a0-43e0-abd7-5044b4f799e0" />
+  <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/d84bc3f1-93e5-453d-a6ce-2c58218c835b" />
+
 
 - Assessment Page
   
@@ -78,7 +79,8 @@ RescueAI addresses this challenge by using AI to:
 
 - AI Result Page
   
-  <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/0d5ffd63-973a-4753-bcdd-d47927af7c9c" />
+  <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/b9673e7f-a853-4f2e-80b6-561735433834" />
+
 
 
 ---
