@@ -1,7 +1,9 @@
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Result() {
   const { state } = useLocation();
+  const navigate = useNavigate();
 
   if (!state) {
     return (
@@ -12,6 +14,7 @@ export default function Result() {
       </div>
     );
   }
+  
 
 
   const severityStyle = {
@@ -39,21 +42,38 @@ export default function Result() {
 
 
         {/* Severity Card */}
-
         <div
-          className={`mt-8 rounded-3xl border p-8 ${
+        className={`mt-8 rounded-3xl border p-8 ${
             severityStyle[state.severity] ||
             "bg-zinc-50 border-zinc-200"
-          }`}
+        }`}
         >
 
-          <p className="text-sm font-medium">
+        <p className="text-sm font-medium text-zinc-600">
             Emergency Level
-          </p>
+        </p>
 
-          <h2 className="mt-2 text-4xl font-bold">
+        <div className="mt-4 flex items-center gap-4">
+
+            <span
+            className={`rounded-full px-4 py-2 text-sm font-semibold ${
+                state.severity === "Critical"
+                ? "bg-red-100 text-red-700"
+                : state.severity === "High"
+                ? "bg-orange-100 text-orange-700"
+                : state.severity === "Medium"
+                ? "bg-yellow-100 text-yellow-700"
+                : "bg-green-100 text-green-700"
+            }`}
+            >
             {state.severity}
-          </h2>
+            </span>
+
+            <p className="text-sm text-zinc-500">
+            Generated on {new Date().toLocaleString()}
+            </p>
+
+        </div>
 
         </div>
 
@@ -201,6 +221,48 @@ export default function Result() {
           </p>
 
         </section>
+
+       
+
+        <div className="mt-10 flex flex-wrap gap-4">
+
+            <a
+                href="https://www.google.com/maps/search/hospitals+near+me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl bg-red-600 px-6 py-3 font-medium text-white transition hover:bg-red-700"
+            >
+                🏥 Find Nearby Hospitals
+            </a>
+
+            
+
+            <button
+                onClick={() => navigate("/assessment")}
+                className="rounded-xl border border-zinc-300 px-6 py-3 font-medium transition hover:bg-zinc-100"
+            >
+                New Assessment
+            </button>
+
+        </div>
+
+        {/* Emergency Notice */}
+
+        <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-5">
+
+            <h3 className="font-semibold text-red-700">
+                🚨 Emergency Notice
+            </h3>
+
+            <p className="mt-2 text-sm text-red-600">
+                If the patient is experiencing severe chest pain, difficulty breathing,
+                heavy bleeding, unconsciousness, or any life-threatening symptoms,
+                contact your local emergency services immediately.
+                RescueAI provides AI-assisted guidance and is not a substitute for
+                professional medical care.
+            </p>
+
+        </div>
 
 
 

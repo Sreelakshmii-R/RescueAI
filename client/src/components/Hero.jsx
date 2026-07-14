@@ -39,14 +39,23 @@ and recommended actions when every second matters.
 <div className="mt-8 flex gap-4">
 
 
-<Link
-to="/assessment"
-className="rounded-xl bg-zinc-900 px-6 py-3 text-white font-medium"
->
+<div className="mt-8 flex flex-wrap gap-4">
 
-Start Assessment
+  <Link
+    to="/assessment"
+    className="rounded-xl bg-zinc-900 px-6 py-3 font-medium text-white transition hover:bg-zinc-800"
+  >
+    Start Assessment →
+  </Link>
 
-</Link>
+  <a
+    href="#how-it-works"
+    className="rounded-xl border border-zinc-300 px-6 py-3 font-medium text-zinc-700 transition hover:bg-zinc-100"
+  >
+    Learn More
+  </a>
+
+</div>
 
 
 </div>
