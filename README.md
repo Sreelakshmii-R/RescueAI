@@ -89,6 +89,30 @@ RescueAI/
 
 ```
 
+# 🧠 How It Works
+
+1. User enters medical information.
+2. Symptoms are sent to the Express backend.
+3. RescueAI generates a structured prompt.
+4. Groq Llama 3.3 analyzes the symptoms.
+5. AI returns structured JSON.
+6. The frontend displays an easy-to-understand emergency report.
+
+---
+
+# Example Output
+
+- Emergency Severity
+- Patient Summary
+- AI Reasoning
+- Possible Conditions
+- First Aid
+- Things To Avoid
+- Recommended Action
+- Emergency Timeline
+
+---
+
 ## 📸 Screenshots
 
 
@@ -164,30 +188,6 @@ When deploying:
 ```
 VITE_API_URL=YOUR_BACKEND_API_URL
 ```
-
----
-
-# 🧠 How It Works
-
-1. User enters medical information.
-2. Symptoms are sent to the Express backend.
-3. RescueAI generates a structured prompt.
-4. Groq Llama 3.3 analyzes the symptoms.
-5. AI returns structured JSON.
-6. The frontend displays an easy-to-understand emergency report.
-
----
-
-# Example Output
-
-- Emergency Severity
-- Patient Summary
-- AI Reasoning
-- Possible Conditions
-- First Aid
-- Things To Avoid
-- Recommended Action
-- Emergency Timeline
 
 ---
 
