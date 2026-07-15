@@ -104,7 +104,8 @@ RescueAI/
 
 - AI Result Page
   
-  <img width="500" height="500"" alt="image" src="https://github.com/user-attachments/assets/c07af4db-dcc1-46ba-9955-5dd70bd39934" />
+  <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/314f03b9-7334-4772-b394-1819f4ff5882" />
+
 
 ---
 
