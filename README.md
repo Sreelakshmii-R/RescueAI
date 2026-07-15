@@ -19,51 +19,75 @@ RescueAI addresses this challenge by using AI to:
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - 🤖 AI-powered emergency symptom analysis
 - 🚨 Emergency severity classification
+  - Low
+  - Moderate
+  - High
+  - Critical
+- 🩺 Possible medical conditions (AI-generated)
+- 🧠 AI reasoning for assessment
+- 👤 Patient summary generation
+- ⏱ Recommended urgency level
 - 🩹 First-aid recommendations
-- ⚠️ Precautions and actions to avoid
-- 📋 Structured emergency assessment report
-- 💻 Responsive and modern user interface
+- ❌ Things to avoid
+- 🚑 Emergency action recommendation
+- 📍 Find nearby hospitals
+- 🎤 Voice-to-text symptom input
+- 📱 Responsive modern UI
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠 Tech Stack
 
 ### Frontend
-- React
-- Vite
+
+- React.js
 - Tailwind CSS
-- Axios
 - React Router
+- Axios
+- Vite
 
 ### Backend
+
 - Node.js
 - Express.js
+- CORS
+
+### AI
+
 - Groq API
+- Llama 3.3 70B Versatile
 
 ### Deployment
+
 - Vercel (Frontend)
 - Render (Backend)
 
 ---
 
-## ⚙️ How It Works
+# 📂 Project Structure
 
-1. User enters symptoms and patient details.
-2. The frontend sends the data to the backend.
-3. The backend constructs an AI prompt.
-4. Groq AI analyzes the information.
-5. RescueAI displays:
-   - Emergency severity
-   - Possible conditions
-   - First-aid guidance
-   - Actions to avoid
-   - Recommended next steps
+```
+RescueAI/
+│
+├── client/
+│   ├── src/
+│   ├── public/
+│   └── vite.config.js
+│
+├── server/
+│   ├── controllers/
+│   ├── prompts/
+│   ├── routes/
+│   ├── services/
+│   └── server.js
+│
+└── README.md
 
----
+```
 
 ## 📸 Screenshots
 
@@ -78,60 +102,124 @@ RescueAI addresses this challenge by using AI to:
   <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/eaf3039c-f902-4afb-897e-cba133c8a615" />
 
 
-
 - AI Result Page
   
   <img width="500" height="500"" alt="image" src="https://github.com/user-attachments/assets/c07af4db-dcc1-46ba-9955-5dd70bd39934" />
 
-
-
-
 ---
 
-## 🚀 Live Demo
+# 🚀 Installation
 
-Frontend:
-https://rescue-ai-zeta.vercel.app/
-
-Backend:
-https://rescueai-6yp9.onrender.com
-
----
-
-## 📂 Installation
-
-### Clone
+## Clone Repository
 
 ```bash
 git clone https://github.com/Sreelakshmii-R/RescueAI.git
+
+cd RescueAI
 ```
 
-### Frontend
+---
+
+## Frontend
 
 ```bash
 cd client
+
 npm install
+
 npm run dev
 ```
 
-### Backend
+---
+
+## Backend
 
 ```bash
 cd server
+
 npm install
+
 npm run dev
 ```
 
 ---
 
-## ⚠️ Disclaimer
+## Environment Variables
 
-RescueAI is an AI-assisted educational tool and **does not replace professional medical advice, diagnosis, or treatment.** Always contact emergency medical services or a qualified healthcare professional in life-threatening situations.
+Create a `.env` file inside the **server** folder.
+
+```
+GROQ_API_KEY=YOUR_GROQ_API_KEY
+```
+
+For the frontend (`client/.env`):
+
+```
+VITE_API_URL=http://localhost:5000
+```
+
+When deploying:
+
+```
+VITE_API_URL=YOUR_BACKEND_API_URL
+```
 
 ---
 
-## 👩‍💻 Author
+# 🧠 How It Works
 
-**Sreelakshmi R**
+1. User enters medical information.
+2. Symptoms are sent to the Express backend.
+3. RescueAI generates a structured prompt.
+4. Groq Llama 3.3 analyzes the symptoms.
+5. AI returns structured JSON.
+6. The frontend displays an easy-to-understand emergency report.
 
-Built for the **NxtWave AI Hackathon 2026**.
+---
+
+# Example Output
+
+- Emergency Severity
+- Patient Summary
+- AI Reasoning
+- Possible Conditions
+- First Aid
+- Things To Avoid
+- Recommended Action
+- Emergency Timeline
+
+---
+
+# 🎯 Future Improvements
+
+- 🌍 Multilingual support
+- 📞 Emergency contact integration
+- 📸 Image-based injury analysis
+- 📍 GPS hospital locator
+- 📄 Downloadable PDF report
+- 📴 Offline emergency guidance
+
+---
+
+# 📄 License
+
+This project was developed for educational and hackathon purposes.
+
+---
+
+# 👩‍💻 Developer
+
+**Sreelakshmi Ramesh**
+
+GitHub: https://github.com/Sreelakshmii-R
+
+---
+
+## ❤️ Acknowledgements
+
+- Groq
+- React
+- Tailwind CSS
+- Express.js
+- Vercel
+- Render
