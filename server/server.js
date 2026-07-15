@@ -11,6 +11,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use("/api/analyze", (req, res, next) => {
+  console.log("📥 Request reached /api/analyze");
+  next();
+});
+
 app.use("/api/analyze", analyzeRoutes);
 
 app.get("/", (req, res) => {

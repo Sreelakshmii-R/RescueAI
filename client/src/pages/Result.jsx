@@ -77,7 +77,61 @@ export default function Result() {
 
         </div>
 
+        {/* Patient Summary */}
 
+        <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+        <h3 className="text-lg font-semibold text-zinc-900">
+            👤 Patient Summary
+        </h3>
+
+        <p className="mt-3 text-zinc-600">
+            {state.patientSummary}
+        </p>
+
+        </div>
+
+        {/* AI Reasoning */}
+
+        <div className="mt-6 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+        <h3 className="text-lg font-semibold text-zinc-900">
+            🧠 Why This Assessment?
+        </h3>
+
+        <p className="mt-3 leading-7 text-zinc-600">
+            {state.reasoning}
+        </p>
+
+        </div>
+
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+                <h3 className="font-semibold text-zinc-900">
+                🎯 AI Confidence
+                </h3>
+
+                <p className="mt-3 text-lg font-bold">
+                {state.confidence}
+                </p>
+
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+                <h3 className="font-semibold text-zinc-900">
+                ⏱ Recommended Urgency
+                </h3>
+
+                <p className="mt-3 text-lg font-bold">
+                {state.urgency}
+                </p>
+
+            </div>
+
+        </div>
 
 
         {/* Possible Conditions */}
@@ -222,7 +276,54 @@ export default function Result() {
 
         </section>
 
-       
+       {/* Emergency Timeline */}
+
+        <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+        <h3 className="mb-6 text-xl font-bold text-zinc-900">
+            🚨 Emergency Timeline
+        </h3>
+
+        <div className="space-y-5">
+
+            {state.timeline?.map((step, index) => (
+
+            <div
+                key={index}
+                className="flex gap-4"
+            >
+
+                <div className="flex flex-col items-center">
+
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 font-bold text-white">
+                    {index + 1}
+                </div>
+
+                {index !== state.timeline.length - 1 && (
+                    <div className="mt-2 h-12 w-1 bg-red-200"></div>
+                )}
+
+                </div>
+
+                <div>
+
+                <h4 className="font-semibold text-red-600">
+                    {step.time}
+                </h4>
+
+                <p className="mt-1 text-zinc-600">
+                    {step.action}
+                </p>
+
+                </div>
+
+            </div>
+
+            ))}
+
+        </div>
+
+        </div>
 
         <div className="mt-10 flex flex-wrap gap-4">
 
